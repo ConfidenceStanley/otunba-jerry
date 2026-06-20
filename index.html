@@ -2380,6 +2380,88 @@ footer::before {
     height: 140px;
   }
 }
+
+/* ═══════════════════════════════
+   TITLE CARDS — MOBILE FIX
+   Stack emblem above content for better readability
+═══════════════════════════════ */
+@media (max-width: 768px) {
+  #titles {
+    padding: 6rem 0;
+  }
+  
+  .titles-watermark {
+    display: none;
+  }
+  
+  .title-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  
+  /* Stack emblem on top, full-width text below */
+  .title-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .title-emblem {
+    margin: 0 auto;
+    width: 56px;
+    height: 56px;
+  }
+  
+  .title-card > div:last-child {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .title-name {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-width: 100%;
+    word-wrap: break-word;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title-location {
+    font-size: 0.88rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .title-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  /* Fix titles header on mobile */
+  .titles-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-card {
+    padding: 2rem 1.25rem;
+  }
+  
+  .title-name {
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+  }
+  
+  .title-desc {
+    font-size: 0.92rem;
+  }
+}
 </style>
 </head>
 <body>
