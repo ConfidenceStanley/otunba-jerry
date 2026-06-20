@@ -9,21 +9,21 @@
 <meta name="description" content="Dr Jerry Oluranti — Nigerian philanthropist, statesman, educator, and author. CEO of Complete Care Support Services, President of Global Outreach Impact Inc. Holder of four traditional titles and Georgia Senate Commendation.">
 <meta name="author" content="Dr Jerry Oluranti">
 <meta name="keywords" content="Dr Jerry Oluranti, Otunba Jerry Oluranti, Nigerian philanthropist, Yewaland, Complete Care Support Services">
-<link rel="canonical" href="https://otunba-jerry-portfolio.vercel.app/">
+<link rel="canonical" href="https://www.drjerryoluranti.org/">
 
 <!-- OPEN GRAPH -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Dr Jerry Oluranti — A Life In Service">
 <meta property="og:description" content="Philanthropist, Statesman, Educator, Musician, Author. A life dedicated to building people across Nigeria and the United States.">
-<meta property="og:url" content="https://otunba-jerry-portfolio.vercel.app/">
-<meta property="og:image" content="https://otunba-jerry-portfolio.vercel.app/assets/images/og-image.jpg">
+<meta property="og:url" content="https://www.drjerryoluranti.org/">
+<meta property="og:image" content="https://www.drjerryoluranti.org/assets/images/og-image.jpg">
 <meta property="og:locale" content="en_US">
 
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dr Jerry Oluranti — A Life In Service">
 <meta name="twitter:description" content="Philanthropist, Statesman, Educator, Musician, Author.">
-<meta name="twitter:image" content="https://otunba-jerry-portfolio.vercel.app/assets/images/og-image.jpg">
+<meta name="twitter:image" content="https://www.drjerryoluranti.org/assets/images/og-image.jpg">
 
 <!-- FAVICON -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308080A'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='14' font-weight='900' fill='%23D4B254' text-anchor='middle'%3EDJO%3C/text%3E%3C/svg%3E">
@@ -43,7 +43,7 @@
   },
   "jobTitle": ["Philanthropist", "Statesman", "Educator", "CEO", "Author"],
   "description": "Nigerian-American philanthropist, statesman, educator, musician, and author. Holder of four traditional titles and Georgia Senate Commendation.",
-  "url": "https://otunba-jerry-portfolio.vercel.app/",
+  "url": "https://www.drjerryoluranti.org/",
   "worksFor": [
     {"@type": "Organization", "name": "Complete Care Support Services Inc."},
     {"@type": "Organization", "name": "Global Outreach Impact Inc."},
@@ -725,6 +725,323 @@ a:focus-visible, button:focus-visible {
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
+
+
+/* ═══════════════════════════════
+   ENTERPRISES DETAILED SECTION
+═══════════════════════════════ */
+#enterprises-detailed {
+  padding: 10rem 0;
+  background: linear-gradient(180deg, var(--obsidian) 0%, var(--parchment-warm) 50%, var(--obsidian) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#enterprises-detailed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  opacity: 0.4;
+}
+
+.ent-detailed-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 6rem;
+}
+
+.ent-detailed-header .section-label {
+  justify-content: center;
+}
+
+.ent-detailed-header .gold-rule {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ent-detailed-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-top: 1.5rem;
+}
+
+/* ── CARD ── */
+.ent-detailed-card {
+  background: linear-gradient(180deg, rgba(11, 21, 32, 0.6) 0%, rgba(8, 8, 10, 0.4) 100%);
+  border: 1px solid var(--border-gold-strong);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ent-detailed-card:last-child {
+  margin-bottom: 0;
+}
+
+.ent-detailed-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.ent-detailed-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 178, 84, 0.08);
+}
+
+.ent-detailed-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── TOP HEADER ── */
+.ent-detailed-top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.8rem 3.5rem;
+  border-bottom: 1px solid var(--border-gold);
+  background: rgba(8, 8, 10, 0.4);
+}
+
+.ent-detailed-num {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-shadow:
+    0 0 30px rgba(212, 178, 84, 0.3),
+    0 0 10px rgba(212, 178, 84, 0.2);
+  opacity: 0.9;
+}
+
+.ent-detailed-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ent-detailed-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  color: var(--gold-shine);
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-shadow:
+    0 0 25px rgba(255, 233, 168, 0.35),
+    0 0 8px rgba(212, 178, 84, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ent-detailed-location {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.ent-detailed-icon {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid var(--border-gold-strong);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 178, 84, 0.06);
+  transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.ent-detailed-card:hover .ent-detailed-icon {
+  border-color: var(--gold-light);
+  background: rgba(212, 178, 84, 0.12);
+  transform: scale(1.08);
+}
+
+/* ── BODY: 3-COLUMN BLOCKS ── */
+.ent-detailed-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.ent-detailed-block {
+  padding: 3rem 2.5rem;
+  border-right: 1px solid var(--border-gold);
+  position: relative;
+  transition: background 0.4s ease;
+}
+
+.ent-detailed-block:last-child {
+  border-right: none;
+}
+
+.ent-detailed-block:hover {
+  background: rgba(212, 178, 84, 0.03);
+}
+
+.ent-detailed-block-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-shine);
+  margin-bottom: 1.2rem;
+  text-shadow:
+    0 0 18px rgba(255, 233, 168, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ent-detailed-block-title::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold-shine);
+  box-shadow: 0 0 6px rgba(255, 233, 168, 0.4);
+  flex-shrink: 0;
+}
+
+.ent-detailed-block-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+/* ═══════════════════════════════
+   ENTERPRISES DETAILED — RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1100px) {
+  #enterprises-detailed {
+    padding: 8rem 0;
+  }
+  
+  .ent-detailed-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .ent-detailed-block {
+    border-right: none;
+    border-bottom: 1px solid var(--border-gold);
+    padding: 2.5rem 3rem;
+  }
+  
+  .ent-detailed-block:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #enterprises-detailed {
+    padding: 6rem 0;
+  }
+  
+  .ent-detailed-header {
+    margin-bottom: 4rem;
+  }
+  
+  .ent-detailed-intro {
+    font-size: 1.05rem;
+  }
+  
+  .ent-detailed-card {
+    margin-bottom: 2rem;
+  }
+  
+  /* Stack the top header on mobile */
+  .ent-detailed-top {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    justify-items: center;
+  }
+  
+  .ent-detailed-num {
+    font-size: 2.2rem;
+  }
+  
+  .ent-detailed-titles {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .ent-detailed-name {
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+  
+  .ent-detailed-location {
+    font-size: 0.85rem;
+  }
+  
+  .ent-detailed-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .ent-detailed-block {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ent-detailed-block-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 1rem;
+  }
+  
+  .ent-detailed-block-title::before {
+    width: 16px;
+  }
+  
+  .ent-detailed-block-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .ent-detailed-top {
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .ent-detailed-block {
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .ent-detailed-block-title {
+    font-size: 0.68rem;
+  }
+}
+
 
 #story {
   background: linear-gradient(180deg, var(--obsidian) 0%, var(--parchment) 50%, var(--obsidian) 100%);
@@ -2628,8 +2945,150 @@ footer::before {
   </div>
 </section>
 
+
+<!-- ══════════ ENTERPRISES DETAILED ══════════ -->
+<section id="enterprises-detailed" class="section-wrap" aria-labelledby="ent-detailed-heading">
+  <div class="container">
+    
+    <!-- HEADER -->
+    <div class="ent-detailed-header">
+      <p class="section-label reveal">Vehicles for Service</p>
+      <h2 class="section-heading reveal delay-1" id="ent-detailed-heading">Enterprises<br><em>of Purpose</em></h2>
+      <div class="gold-rule reveal delay-2" aria-hidden="true"></div>
+      <p class="ent-detailed-intro reveal delay-2">Each organization he leads began not as a business opportunity, but as a response to a human need. They are, in essence, instruments of service.</p>
+    </div>
+
+    <!-- ENTERPRISE 01 -->
+    <article class="ent-detailed-card reveal delay-1" aria-labelledby="ent-01-name">
+      <header class="ent-detailed-top">
+        <span class="ent-detailed-num" aria-hidden="true">01</span>
+        <div class="ent-detailed-titles">
+          <h3 class="ent-detailed-name" id="ent-01-name">Complete Care Support Services Inc.</h3>
+          <p class="ent-detailed-location">Maryland, United States</p>
+        </div>
+        <div class="ent-detailed-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--gold-light);">
+            <path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+      </header>
+      <div class="ent-detailed-body">
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Challenge</h4>
+          <p class="ent-detailed-block-text">Access to quality, compassionate care remains unequal. For many individuals and families, navigating healthcare is a labyrinth of barriers, financial, logistical, and human.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Response</h4>
+          <p class="ent-detailed-block-text">As CEO, Otunba built Complete Care not around margins, but around dignity. The organization delivers support services rooted in the conviction that every person deserves consistent, respectful care.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Impact</h4>
+          <p class="ent-detailed-block-text">Families stabilized. Individuals supported. A community made more whole through the quiet, persistent work of healthcare done right.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTERPRISE 02 -->
+    <article class="ent-detailed-card reveal delay-1" aria-labelledby="ent-02-name">
+      <header class="ent-detailed-top">
+        <span class="ent-detailed-num" aria-hidden="true">02</span>
+        <div class="ent-detailed-titles">
+          <h3 class="ent-detailed-name" id="ent-02-name">Global Outreach Impact Inc.</h3>
+          <p class="ent-detailed-location">International</p>
+        </div>
+        <div class="ent-detailed-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--gold-light);">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+          </svg>
+        </div>
+      </header>
+      <div class="ent-detailed-body">
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Challenge</h4>
+          <p class="ent-detailed-block-text">Systemic poverty does not wait. Communities in need require sustained, structured outreach, not charity in moments, but partnership across time.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Response</h4>
+          <p class="ent-detailed-block-text">As President, he built Global Outreach Impact into a vehicle for principled humanitarian work that reaches across borders and remains grounded in local relationships.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Impact</h4>
+          <p class="ent-detailed-block-text">Hope delivered. Capacity built. Communities connected to resources, networks, and possibilities they could not previously access.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTERPRISE 03 -->
+    <article class="ent-detailed-card reveal delay-1" aria-labelledby="ent-03-name">
+      <header class="ent-detailed-top">
+        <span class="ent-detailed-num" aria-hidden="true">03</span>
+        <div class="ent-detailed-titles">
+          <h3 class="ent-detailed-name" id="ent-03-name">Nitanorm Group of Companies</h3>
+          <p class="ent-detailed-location">Nigeria</p>
+        </div>
+        <div class="ent-detailed-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--gold-light);">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          </svg>
+        </div>
+      </header>
+      <div class="ent-detailed-body">
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Challenge</h4>
+          <p class="ent-detailed-block-text">Economic vitality in developing communities requires local enterprises that employ, train, and invest in the people around them not extraction, but cultivation.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Response</h4>
+          <p class="ent-detailed-block-text">As President, he leads Nitanorm with an understanding that business, done rightly, is one of the most powerful tools for community transformation.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Impact</h4>
+          <p class="ent-detailed-block-text">Livelihoods created. Capacity grown. The economic fabric of community strengthened from the inside out.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTERPRISE 04 -->
+    <article class="ent-detailed-card reveal delay-1" aria-labelledby="ent-04-name">
+      <header class="ent-detailed-top">
+        <span class="ent-detailed-num" aria-hidden="true">04</span>
+        <div class="ent-detailed-titles">
+          <h3 class="ent-detailed-name" id="ent-04-name">Amazon Luxury Apartment Limited</h3>
+          <p class="ent-detailed-location">Nigeria</p>
+        </div>
+        <div class="ent-detailed-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--gold-light);">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22"/>
+          </svg>
+        </div>
+      </header>
+      <div class="ent-detailed-body">
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Challenge</h4>
+          <p class="ent-detailed-block-text">Housing shapes life. Safe, dignified living conditions create the conditions in which families can flourish, children can learn, and communities can build forward.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Response</h4>
+          <p class="ent-detailed-block-text">As CEO, he brought the same intention to real estate development understanding that every structure built is a context created for human lives.</p>
+        </div>
+        <div class="ent-detailed-block">
+          <h4 class="ent-detailed-block-title">The Impact</h4>
+          <p class="ent-detailed-block-text">Homes built. Standards raised. The physical environment of community elevated as a statement of belief in those who inhabit it.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
 <!-- ENTERPRISES -->
-<section id="enterprises" class="section-wrap" aria-labelledby="ent-heading">
+<!-- <section id="enterprises" class="section-wrap" aria-labelledby="ent-heading">
   <div class="container">
     <p class="section-label reveal">Vehicles for Service</p>
     <h2 class="section-heading reveal delay-1" id="ent-heading">Enterprises<br><em>of Purpose</em></h2>
@@ -2686,7 +3145,7 @@ footer::before {
       </article>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- HONORS -->
 <section id="honors" class="section-wrap" aria-labelledby="honors-heading">
@@ -2695,7 +3154,7 @@ footer::before {
       <p class="section-label reveal" style="justify-content:center;">Recognition Earned</p>
       <h2 class="section-heading reveal delay-1" id="honors-heading">The Honors<br><em>Bestowed</em></h2>
       <div class="gold-rule center reveal delay-2" aria-hidden="true"></div>
-      <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);max-width:540px;margin:0 auto;line-height:1.8;font-weight:500;font-style:italic;">Each honor is a record of service recognized — by institutions, governments, and the people served.</p>
+      <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);max-width:540px;margin:0 auto;line-height:1.8;font-weight:500;font-style:italic;">Each honor is a record of service recognized by institutions, governments, and the people served.</p>
     </div>
     <div class="honors-layout">
       <article class="honor-card reveal delay-1">
@@ -2744,7 +3203,7 @@ footer::before {
         <p class="section-label reveal" style="justify-content:center;">The Royal Chronicle</p>
         <h2 class="section-heading reveal delay-1" id="titles-heading">Titles of<br><em>Stewardship</em></h2>
         <div class="gold-rule center reveal delay-2" aria-hidden="true"></div>
-        <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);line-height:1.85;font-weight:500;">In Yoruba tradition, a title is not granted — it is entrusted. It represents the community's faith in an individual to carry its name with dignity and serve its future. Otunba Jerry Oluranti has been so entrusted, four times over.</p>
+        <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);line-height:1.85;font-weight:500;">In Yoruba tradition, a title is not granted, it is entrusted. It represents the community's faith in an individual to carry its name with dignity and serve its future. Otunba Jerry Oluranti has been so entrusted, four times over.</p>
       </div>
       <div class="title-cards-grid">
         <article class="title-card reveal delay-1">
@@ -2764,7 +3223,7 @@ footer::before {
           <div>
             <h3 class="title-name">Otunba Bobakeye of Oke Sopen Ijebu Igbo</h3>
             <p class="title-location">Oke Sopen, Ijebu Igbo · Ogun State, Nigeria</p>
-            <p class="title-desc">A second Otunba chieftaincy extending his sphere of honour across Ijebu Igbo — a recognition that his service has reached beyond one community to bless many.</p>
+            <p class="title-desc">A second Otunba chieftaincy extending his sphere of honour across Ijebu Igbo a recognition that his service has reached beyond one community to bless many.</p>
           </div>
         </article>
         <article class="title-card reveal delay-3">
@@ -2774,7 +3233,7 @@ footer::before {
           <div>
             <h3 class="title-name">Jagunmolu of Orile Itesi Land</h3>
             <p class="title-location">Orile Itesi · Southwest Nigeria</p>
-            <p class="title-desc">Jagunmolu — a title of courage and advocacy. The community bestowed this honour upon one whose voice and deeds have brought strength where it was needed most.</p>
+            <p class="title-desc">Jagunmolu, a title of courage and advocacy. The community bestowed this honour upon one whose voice and deeds have brought strength where it was needed most.</p>
           </div>
         </article>
         <article class="title-card reveal delay-4">
@@ -3253,11 +3712,7 @@ footer::before {
       <p class="section-label" style="justify-content:center;">Begin A Conversation</p>
       <h2 class="contact-heading" id="contact-heading">The work<br>continues.</h2>
       <p class="contact-sub">If you are building something meaningful in healthcare, education, community, or humanitarian outreach and you believe there is a conversation to be had, we would be glad to hear from you.</p>
-<<<<<<< HEAD
       <a href="#" class="contact-btn" aria-label="Email Otunba Jerry Oluranti to begin a conversation">Begin the Conversation</a>
-=======
-      <a href="mailto:" class="contact-btn" aria-label="Email Otunba Jerry Oluranti to begin a conversation">Begin the Conversation</a>
->>>>>>> f3a1eef (Updated the Enterprises)
       <p class="contact-note">Every significant partnership begins with a single, thoughtful exchange.</p>
     </div>
   </div>
