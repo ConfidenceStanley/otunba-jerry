@@ -91,12 +91,6 @@
   --focus-ring: #FFD966;        
 }
 
-/* ═══════════════════════════════
-   ⭐ GOLD SHINE SYSTEM
-   For luxury subtitle text that "shines"
-═══════════════════════════════ */
-
-/* Metallic gold gradient — catches light like real gold leaf */
 .gold-shine {
   background: linear-gradient(
     135deg,
@@ -114,7 +108,6 @@
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
 }
 
-/* Solid bright gold with luminous glow */
 .gold-glow {
   color: var(--gold-shine);
   text-shadow:
@@ -123,16 +116,11 @@
     0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* Subtle glow for body text on dark */
 .gold-soft-glow {
   color: var(--gold-light);
   text-shadow: 0 0 15px rgba(240, 222, 168, 0.3);
 }
 
-
-/* ═══════════════════════════════
-   ACCESSIBILITY FOUNDATIONS
-═══════════════════════════════ */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 html { scroll-behavior:smooth; font-size:16px; }
@@ -146,7 +134,6 @@ body {
   font-weight: 400;
 }
 
-/* WCAG 2.4.1 — Skip Navigation */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -169,7 +156,6 @@ body {
   outline-offset: 2px;
 }
 
-/* WCAG 2.4.7 & 2.4.11 — Universal Focus Indicators */
 *:focus { outline: none; }
 *:focus-visible {
   outline: 3px solid var(--focus-ring);
@@ -182,7 +168,6 @@ a:focus-visible, button:focus-visible {
   box-shadow: 0 0 0 6px rgba(255,217,102,0.2);
 }
 
-/* Screen-reader-only utility */
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -193,9 +178,6 @@ a:focus-visible, button:focus-visible {
   border: 0;
 }
 
-/* ═══════════════════════════════
-   INTRO OVERLAY
-═══════════════════════════════ */
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -271,9 +253,6 @@ a:focus-visible, button:focus-visible {
   animation: monoAppear 0.7s ease forwards 2s;
 }
 
-/* ═══════════════════════════════
-   PARTICLES
-═══════════════════════════════ */
 #particle-canvas {
   position: fixed;
   inset: 0;
@@ -282,9 +261,6 @@ a:focus-visible, button:focus-visible {
   opacity: 0.4;
 }
 
-/* ═══════════════════════════════
-   NAVIGATION — BOLDER FONT (Correction #2)
-═══════════════════════════════ */
 #main-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -310,18 +286,18 @@ a:focus-visible, button:focus-visible {
 .nav-brand-mono {
   font-family: 'Cinzel', serif;
   font-size: 1.25rem;
-  font-weight: 900;                    /* ⬆ bolder */
-  color: var(--gold-light);            /* ⬆ brighter for contrast */
+  font-weight: 900;
+  color: var(--gold-light);
   letter-spacing: 0.25em;
   line-height: 1;
 }
 .nav-brand-sub {
   font-family: 'Lora', serif;
-  font-size: 0.68rem;                  /* ⬆ larger */
-  font-weight: 600;                    /* ⬆ bolder */
+  font-size: 0.68rem;
+  font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--text-secondary);        /* ⬆ brighter */
+  color: var(--text-secondary);
 }
 .nav-links {
   display: flex;
@@ -330,11 +306,11 @@ a:focus-visible, button:focus-visible {
 }
 .nav-links a {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;                  /* ⬆ larger (was 0.65) */
-  font-weight: 600;                    /* ⬆ bolder (was 400) */
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-secondary);        /* ⬆ brighter for legibility */
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s;
   position: relative;
@@ -352,7 +328,7 @@ a:focus-visible, button:focus-visible {
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--gold-light); }
 .nav-links a:hover::after, .nav-links a:focus-visible::after { transform: scaleX(1); }
 
-/* HAMBURGER */
+/* HAMBURGER - FIXED */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -361,13 +337,17 @@ a:focus-visible, button:focus-visible {
   padding: 8px;
   background: none;
   border: 1px solid var(--border-gold);
-  min-width: 44px;                     /* WCAG 2.5.5 touch target */
+  min-width: 44px;
   min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  z-index: 510;
+  position: relative;
 }
 .nav-hamburger span {
   display: block;
   width: 26px;
-  height: 2px;                         /* ⬆ thicker */
+  height: 2px;
   background: var(--gold-light);
   transition: all 0.3s;
 }
@@ -391,8 +371,8 @@ a:focus-visible, button:focus-visible {
 .mobile-nav.open { right: 0; }
 .mobile-nav a {
   font-family: 'Cinzel', serif;
-  font-size: 0.95rem;                  /* ⬆ larger */
-  font-weight: 600;                    /* ⬆ bolder */
+  font-size: 0.95rem;
+  font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--text-primary);
@@ -428,9 +408,7 @@ a:focus-visible, button:focus-visible {
 }
 .mobile-overlay.open { opacity:1; pointer-events:all; }
 
-/* ═══════════════════════════════
-   HERO — JERRY FULL GOLD (Correction #1)
-═══════════════════════════════ */
+/* HERO - FIXED CENTERING */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -439,6 +417,7 @@ a:focus-visible, button:focus-visible {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  width: 100%;
 }
 .hero-bg {
   position: absolute;
@@ -485,7 +464,11 @@ a:focus-visible, button:focus-visible {
   text-align: center;
   padding: 10rem 3rem 6rem;
   max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
 }
+
+/* HERO ELEMENTS - FIXED: use opacity-only animation, no translateY shift on mobile */
 .hero-eyebrow {
   font-family: 'Cinzel', serif;
   font-size: 0.85rem;                             
@@ -495,7 +478,7 @@ a:focus-visible, button:focus-visible {
   color: var(--gold-shine);                   
   margin-bottom: 2.5rem;
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(0);
   text-shadow:                                  
     0 0 25px rgba(255, 233, 168, 0.5),
     0 0 10px rgba(212, 178, 84, 0.4),
@@ -504,24 +487,23 @@ a:focus-visible, button:focus-visible {
 .hero-name-wrap {
   margin-bottom: 1.5rem;
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(0);
 }
 .hero-name-top {
   font-family: 'Cinzel', serif;
   font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 600;                    /* ⬆ bolder */
-  color: var(--ivory-dim);             /* ⬆ brighter */
+  font-weight: 600;
+  color: var(--ivory-dim);
   letter-spacing: 0.35em;
   line-height: 1;
   display: block;
 }
 
-/* ✓ CORRECTION #1: JERRY now FULL GOLD */
 .hero-name-main {
   font-family: 'Cinzel', serif;
   font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 900;
-  color: var(--gold-light);            /* ⬅ FULL GOLD */
+  color: var(--gold-light);
   letter-spacing: 0.06em;
   line-height: 0.95;
   display: block;
@@ -531,7 +513,7 @@ a:focus-visible, button:focus-visible {
 .hero-name-sub {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 5vw, 4.5rem);
-  font-weight: 400;                    /* ⬆ bolder (was 300) */
+  font-weight: 400;
   font-style: italic;
   color: var(--gold-bright);
   letter-spacing: 0.08em;
@@ -545,7 +527,7 @@ a:focus-visible, button:focus-visible {
   gap: 1.2rem;
   margin: 2.5rem auto;
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(0);
   max-width: 400px;
 }
 .hero-divider-line {
@@ -570,14 +552,14 @@ a:focus-visible, button:focus-visible {
   gap: 1.5rem;
   margin-bottom: 3rem;
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(0);
 }
 .hero-role-badge {
   padding: 0.6rem 1.4rem;
   border: 1px solid var(--border-gold-strong);
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;                  /* ⬆ larger */
-  font-weight: 700;                    /* ⬆ bolder */
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ivory);
@@ -594,7 +576,7 @@ a:focus-visible, button:focus-visible {
 }
 .hero-cta {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(0);
 }
 .hero-cta-btn {
   display: inline-flex;
@@ -604,8 +586,8 @@ a:focus-visible, button:focus-visible {
   border: 1.5px solid var(--gold);
   color: var(--gold-light);
   font-family: 'Cinzel', serif;
-  font-size: 0.82rem;                  /* ⬆ larger */
-  font-weight: 700;                    /* ⬆ bolder */
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-decoration: none;
@@ -660,16 +642,13 @@ a:focus-visible, button:focus-visible {
 }
 .scroll-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;                   /* ⬆ larger */
-  font-weight: 600;                    /* ⬆ bolder */
+  font-size: 0.7rem;
+  font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--text-secondary);
 }
 
-/* ═══════════════════════════════
-   SHARED SECTION STYLES — BOLDER SUBTITLES (Correction #4)
-═══════════════════════════════ */
 .section-wrap {
   position: relative;
   z-index: 1;
@@ -731,9 +710,6 @@ a:focus-visible, button:focus-visible {
 }
 .gold-rule.center { margin-left: auto; margin-right: auto; }
 
-/* ═══════════════════════════════
-   REVEAL ANIMATIONS
-═══════════════════════════════ */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -750,9 +726,6 @@ a:focus-visible, button:focus-visible {
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
-/* ═══════════════════════════════
-   STORY SECTION
-═══════════════════════════════ */
 #story {
   background: linear-gradient(180deg, var(--obsidian) 0%, var(--parchment) 50%, var(--obsidian) 100%);
 }
@@ -807,30 +780,27 @@ a:focus-visible, button:focus-visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-style: italic;
-  font-weight: 500;                    /* ⬆ bolder */
+  font-weight: 500;
   color: var(--gold-light);
   line-height: 1.5;
   padding-left: 1.5rem;
-  border-left: 3px solid var(--gold);  /* ⬆ thicker */
+  border-left: 3px solid var(--gold);
 }
 .story-right p {
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   line-height: 2;
   color: var(--text-secondary);
-  font-weight: 400;                    /* ⬆ bolder (was 300) */
+  font-weight: 400;
   margin-bottom: 1.8rem;
 }
 .story-right p.lead {
   font-size: clamp(1.25rem, 1.8vw, 1.55rem);
   color: var(--ivory);
-  font-weight: 500;                    /* ⬆ bolder */
+  font-weight: 500;
   line-height: 1.75;
 }
 .story-right strong { color: var(--gold-light); font-weight: 700; }
 
-/* ═══════════════════════════════
-   STATS BAR
-═══════════════════════════════ */
 #stats {
   padding: 0;
   position: relative;
@@ -868,24 +838,21 @@ a:focus-visible, button:focus-visible {
 .stat-number {
   font-family: 'Cinzel', serif;
   font-size: clamp(2.8rem, 4vw, 4.2rem);
-  font-weight: 900;                    /* ⬆ bolder */
-  color: var(--gold-light);            /* ⬆ brighter */
+  font-weight: 900;
+  color: var(--gold-light);
   line-height: 1;
   margin-bottom: 0.4rem;
   display: block;
 }
 .stat-label {
   font-family: 'Lora', serif;
-  font-size: 0.82rem;                  /* ⬆ larger */
-  font-weight: 600;                    /* ⬆ bolder */
+  font-size: 0.82rem;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-secondary);        /* ⬆ brighter */
+  color: var(--text-secondary);
 }
 
-/* ═══════════════════════════════
-   ENTERPRISES
-═══════════════════════════════ */
 #enterprises {
   padding: 10rem 0;
   background: var(--obsidian);
@@ -958,12 +925,9 @@ a:focus-visible, button:focus-visible {
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.85;
-  font-weight: 400;                    /* ⬆ bolder */
+  font-weight: 400;
 }
 
-/* ═══════════════════════════════
-   HONORS
-═══════════════════════════════ */
 #honors {
   padding: 10rem 0;
   background: linear-gradient(180deg, var(--obsidian), var(--navy), var(--obsidian));
@@ -1013,12 +977,9 @@ a:focus-visible, button:focus-visible {
   font-size: 0.98rem;
   color: var(--text-secondary);
   line-height: 1.75;
-  font-weight: 400;                    /* ⬆ bolder */
+  font-weight: 400;
 }
 
-/* ═══════════════════════════════
-   TITLES
-═══════════════════════════════ */
 #titles {
   background: var(--parchment);
   padding: 10rem 0;
@@ -1108,9 +1069,6 @@ a:focus-visible, button:focus-visible {
   font-weight: 400;
 }
 
-/* ═══════════════════════════════
-   MUSICIAN
-═══════════════════════════════ */
 #musician {
   background: linear-gradient(180deg, var(--obsidian), var(--parchment-warm));
   padding: 10rem 0;
@@ -1125,7 +1083,7 @@ a:focus-visible, button:focus-visible {
   font-size: clamp(1.05rem, 1.4vw, 1.18rem);
   line-height: 1.95;
   color: var(--text-secondary);
-  font-weight: 400;                    /* ⬆ bolder */
+  font-weight: 400;
   margin-bottom: 1.6rem;
 }
 .music-grid {
@@ -1163,9 +1121,6 @@ a:focus-visible, button:focus-visible {
   font-weight: 400;
 }
 
-/* ═══════════════════════════════
-   GALLERY — VISIBLE IMAGES (Correction #5)
-═══════════════════════════════ */
 #gallery {
   padding: 10rem 0;
   background: var(--obsidian);
@@ -1191,8 +1146,8 @@ a:focus-visible, button:focus-visible {
   border: none;
   border-right: 1px solid var(--border-gold);
   font-family: 'Cinzel', serif;
-  font-size: 0.75rem;                  /* ⬆ larger */
-  font-weight: 700;                    /* ⬆ bolder */
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--text-secondary);
@@ -1214,7 +1169,6 @@ a:focus-visible, button:focus-visible {
   background: var(--gold);
 }
 
-/* GALLERY MOSAIC — Images visible by default (Correction #5) */
 .gallery-mosaic {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1235,7 +1189,6 @@ a:focus-visible, button:focus-visible {
 .g-item.span2 { grid-column: span 2; aspect-ratio: 2/1; }
 .g-item.span2h { grid-row: span 2; aspect-ratio: 1/2; }
 
-/* ✓ CORRECTION #5: Images visible at all times, brighter on hover */
 .g-item img {
   width: 100%;
   height: 100%;
@@ -1246,7 +1199,7 @@ a:focus-visible, button:focus-visible {
   z-index: 1;
   display: block;
   transition: transform 0.6s ease, filter 0.4s ease;
-  filter: brightness(1) contrast(1.02);   /* ⬅ Fully visible */
+  filter: brightness(1) contrast(1.02);
 }
 .g-item:hover img,
 .g-item:focus-visible img {
@@ -1306,7 +1259,6 @@ a:focus-visible, button:focus-visible {
   font-style: italic;
 }
 
-/* LIGHTBOX */
 #lightbox {
   position: fixed;
   inset: 0;
@@ -1405,9 +1357,6 @@ a:focus-visible, button:focus-visible {
   border-color: var(--gold-light);
 }
 
-/* ═══════════════════════════════
-   PRESS / BOOKS — PROPER LANDSCAPE PROPORTIONS (Correction #6)
-═══════════════════════════════ */
 #press {
   padding: 10rem 0;
   background: linear-gradient(180deg, var(--obsidian), var(--navy), var(--obsidian));
@@ -1453,8 +1402,8 @@ a:focus-visible, button:focus-visible {
 }
 .press-badge-date {
   font-family: 'Lora', serif;
-  font-size: 0.8rem;                   /* ⬆ larger */
-  font-weight: 500;                    /* ⬆ bolder */
+  font-size: 0.8rem;
+  font-weight: 500;
   font-style: italic;
   color: var(--text-secondary);
 }
@@ -1470,15 +1419,15 @@ a:focus-visible, button:focus-visible {
   font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.85;
-  font-weight: 500;                    /* ⬆ bolder */
+  font-weight: 500;
 }
 .press-link {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;                  /* ⬆ larger */
-  font-weight: 700;                    /* ⬆ bolder */
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold-light);
@@ -1496,7 +1445,6 @@ a:focus-visible, button:focus-visible {
   margin: 2rem 0;
 }
 
-/* ✓ CORRECTION #6: BOOKS — landscape-proportional thumbnails */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1515,9 +1463,8 @@ a:focus-visible, button:focus-visible {
   border-color: var(--gold);
 }
 
-/* ✓ Book cover now in proper LANDSCAPE proportion for landscape thumbnails */
 .book-cover {
-  aspect-ratio: 4/3;                   /* ⬅ LANDSCAPE proportion */
+  aspect-ratio: 4/3;
   position: relative;
   overflow: hidden;
   background:
@@ -1599,10 +1546,9 @@ a:focus-visible, button:focus-visible {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  font-weight: 400;                    /* ⬆ bolder */
+  font-weight: 400;
 }
 
-/* DIGNITARIES */
 .dignitaries-bar {
   margin-top: 4rem;
   padding: 3.5rem;
@@ -1630,7 +1576,7 @@ a:focus-visible, button:focus-visible {
   font-size: clamp(1.15rem, 2vw, 1.55rem);
   color: var(--ivory);
   line-height: 1.5;
-  font-weight: 500;                    /* ⬆ bolder */
+  font-weight: 500;
   margin-bottom: 1.5rem;
 }
 .dig-tags {
@@ -1642,15 +1588,12 @@ a:focus-visible, button:focus-visible {
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-gold-strong);
   font-family: 'Lora', serif;
-  font-size: 0.85rem;                  /* ⬆ larger */
-  font-weight: 500;                    /* ⬆ bolder */
+  font-size: 0.85rem;
+  font-weight: 500;
   font-style: italic;
   color: var(--text-secondary);
 }
 
-/* ═══════════════════════════════
-   LEGACY
-═══════════════════════════════ */
 #legacy {
   background: linear-gradient(180deg, var(--obsidian), var(--parchment));
   padding: 10rem 0;
@@ -1694,9 +1637,6 @@ a:focus-visible, button:focus-visible {
   font-weight: 400;
 }
 
-/* ═══════════════════════════════
-   CONTACT
-═══════════════════════════════ */
 #contact {
   padding: 12rem 0 10rem;
   position: relative;
@@ -1729,7 +1669,7 @@ a:focus-visible, button:focus-visible {
   font-size: 1.2rem;
   color: var(--text-secondary);
   line-height: 1.85;
-  font-weight: 500;                    /* ⬆ bolder */
+  font-weight: 500;
   font-style: italic;
   margin-bottom: 3.5rem;
 }
@@ -1741,8 +1681,8 @@ a:focus-visible, button:focus-visible {
   border: 1.5px solid var(--gold);
   color: var(--gold-light);
   font-family: 'Cinzel', serif;
-  font-size: 0.82rem;                  /* ⬆ larger */
-  font-weight: 700;                    /* ⬆ bolder */
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-decoration: none;
@@ -1764,64 +1704,384 @@ a:focus-visible, button:focus-visible {
 .contact-btn:hover::before, .contact-btn:focus-visible::before { transform: translateX(0); }
 .contact-note {
   font-family: 'Lora', serif;
-  font-size: 0.88rem;                  /* ⬆ larger */
-  font-weight: 500;                    /* ⬆ bolder */
+  font-size: 0.88rem;
+  font-weight: 500;
   font-style: italic;
   color: var(--text-secondary);
   margin-top: 2rem;
 }
 
 /* ═══════════════════════════════
-   FOOTER
+   FOOTER — FULL WIDTH REDESIGN
 ═══════════════════════════════ */
 footer {
-  background: var(--obsidian);
+  background: linear-gradient(180deg, var(--obsidian) 0%, #050507 100%);
   border-top: 1px solid var(--border-gold-strong);
-  padding: 3rem 5rem;
+  padding: 5rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  box-shadow: 0 0 20px rgba(212, 178, 84, 0.4);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── PARTNERS SECTION ── */
+.footer-partners {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.footer-section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--gold-shine);
+  margin-bottom: 3rem;
+  text-shadow:
+    0 0 20px rgba(255, 233, 168, 0.4),
+    0 0 8px rgba(212, 178, 84, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer-section-label::before,
+.footer-section-label::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-shine), transparent);
+  box-shadow: 0 0 8px rgba(255, 233, 168, 0.4);
+}
+
+.footer-partners-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* ── PARTNER CARD ── */
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(180deg, rgba(11, 21, 32, 0.6) 0%, rgba(8, 8, 10, 0.4) 100%);
+  border: 1px solid var(--border-gold-strong);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+.partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover,
+.partner-card:focus-visible {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, rgba(11, 21, 32, 0.85) 0%, rgba(8, 8, 10, 0.6) 100%);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(212, 178, 84, 0.1);
+}
+
+.partner-card:hover::before,
+.partner-card:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* ── PARTNER LOGO ── */
+.partner-logo-wrap {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 244, 236, 0.04);
+  border-radius: 50%;
+  padding: 1.2rem;
+  transition: background 0.4s ease;
+  flex-shrink: 0;
+}
+
+.partner-card:hover .partner-logo-wrap,
+.partner-card:focus-visible .partner-logo-wrap {
+  background: rgba(248, 244, 236, 0.08);
+}
+
+.partner-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover .partner-logo,
+.partner-card:focus-visible .partner-logo {
+  transform: scale(1.05);
+}
+
+.partner-logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+}
+
+/* ── PARTNER INFO ── */
+.partner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
 }
-.footer-left {
+
+.partner-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-shine);
+  text-shadow:
+    0 0 18px rgba(255, 233, 168, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+  line-height: 1.3;
+}
+
+.partner-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.partner-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-top: 0.4rem;
+  transition: letter-spacing 0.3s ease, color 0.3s ease;
+}
+
+.partner-card:hover .partner-link,
+.partner-card:focus-visible .partner-link {
+  letter-spacing: 0.35em;
+  color: var(--gold-shine);
+}
+
+/* ── DIVIDER ── */
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 auto 3rem;
+  max-width: 500px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-gold-strong), transparent);
+}
+
+/* ── BOTTOM: BRAND & COPYRIGHT ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
+
 .footer-mono {
   font-family: 'Cinzel', serif;
-  font-size: 1.35rem;
-  font-weight: 900;                    /* ⬆ bolder */
+  font-size: 1.5rem;
+  font-weight: 900;
   color: var(--gold-light);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
+  text-shadow: 0 0 20px rgba(212, 178, 84, 0.25);
+  line-height: 1;
 }
-.footer-tagline {
+
+.footer-tagline-text {
   font-family: 'Lora', serif;
-  font-size: 0.82rem;                  /* ⬆ larger */
-  font-weight: 500;                    /* ⬆ bolder */
+  font-size: 0.82rem;
+  font-weight: 500;
   font-style: italic;
   color: var(--text-secondary);
+  letter-spacing: 0.05em;
 }
-.footer-center {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.footer-rule {
-  width: 1px;
-  height: 40px;
-  background: var(--border-gold-strong);
-}
-.footer-right {
-  text-align: right;
+
+.footer-meta {
   font-family: 'Lora', serif;
-  font-size: 0.85rem;                  /* ⬆ larger */
-  font-weight: 500;                    /* ⬆ bolder */
-  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-align: right;
+}
+
+.footer-meta p {
   line-height: 1.6;
 }
 
 /* ═══════════════════════════════
-   RESPONSIVE
+   FOOTER RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1100px) {
+  .footer-container { padding: 0 3rem; }
+}
+
+@media (max-width: 900px) {
+  .footer-partners-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+  
+  .footer-section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-section-label::before,
+  .footer-section-label::after {
+    width: 24px;
+  }
+  
+  .footer-partners {
+    margin-bottom: 3rem;
+  }
+  
+  .partner-card {
+    padding: 2rem 1.5rem;
+    gap: 1.2rem;
+  }
+  
+  .partner-logo-wrap {
+    width: 110px;
+    height: 110px;
+    padding: 1rem;
+  }
+  
+  .partner-name {
+    font-size: 0.92rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .partner-tagline {
+    font-size: 0.95rem;
+  }
+  
+  .partner-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+  }
+  
+  .footer-divider {
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    max-width: 280px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-brand {
+    align-items: center;
+  }
+  
+  .footer-meta {
+    text-align: center;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container { padding: 0 1.25rem; }
+  
+  .footer-section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+  }
+  
+  .partner-logo-wrap {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE - FIXED
 ═══════════════════════════════ */
 @media (max-width: 1100px) {
   .container { padding: 0 3rem; }
@@ -1836,12 +2096,13 @@ footer {
   .footer-right { text-align: center; }
   .footer-center { justify-content: center; }
 }
+
 @media (max-width: 768px) {
   .container { padding: 0 1.5rem; }
   #main-nav { padding: 1.2rem 1.5rem; }
   #main-nav.scrolled { padding: 0.9rem 1.5rem; }
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+  .nav-hamburger { display: flex !important; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
   .honors-layout { grid-template-columns: 1fr; }
   .title-cards-grid { grid-template-columns: 1fr; }
@@ -1854,7 +2115,70 @@ footer {
   .hero-side-line { display: none; }
   .lb-prev { left: -50px; }
   .lb-next { right: -50px; }
+  
+  /* HERO FIX: Force full centering on mobile */
+  #hero {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero-content {
+    padding: 8rem 1.5rem 5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-eyebrow,
+  .hero-name-wrap,
+  .hero-divider,
+  .hero-roles,
+  .hero-cta {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-name-top,
+  .hero-name-main,
+  .hero-name-sub {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-roles {
+    gap: 0.8rem;
+    justify-content: center;
+  }
+  .hero-role-badge {
+    font-size: 0.68rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .story-left {
+    position: static;
+    max-width: 100%;
+    order: 2;
+  }
+  .story-right {
+    order: 1;
+  }
+  .story-portrait {
+    max-width: 320px;
+    margin: 0 auto 2.5rem;
+  }
+  
+  footer { padding: 3rem 1.5rem; }
 }
+
 @media (max-width: 480px) {
   .gallery-mosaic { grid-template-columns: 1fr; }
   .g-item.span2, .g-item.span2h { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; }
@@ -1863,9 +2187,16 @@ footer {
   .music-grid { grid-template-columns: 1fr; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .lb-prev, .lb-next { display: none; }
+  
+  .hero-content {
+    padding: 7rem 1rem 4rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+  }
 }
 
-/* WCAG 2.3.3 — Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1877,7 +2208,6 @@ footer {
   #intro-overlay { display: none !important; }
 }
 
-/* WCAG 1.4.6 — High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
     --text-secondary: #FFFFFF;
@@ -1888,11 +2218,172 @@ footer {
     --border-gold-strong: rgba(255,217,102,0.8);
   }
 }
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  main, section, .section-wrap {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Fix the giant watermark that causes overflow */
+  .titles-watermark {
+    font-size: 8rem;
+    overflow: hidden;
+  }
+  
+  /* Fix nav width */
+  #main-nav {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  /* Fix particle canvas */
+  #particle-canvas {
+    width: 100vw;
+    max-width: 100%;
+  }
+  
+  /* Ensure footer fills width */
+  footer {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 3rem 1.5rem;
+  }
+  
+  /* Force all sections to fill mobile width */
+  #hero,
+  #story,
+  #stats,
+  #enterprises,
+  #honors,
+  #titles,
+  #musician,
+  #gallery,
+  #press,
+  #legacy,
+  #contact {
+    width: 100%;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Center content blocks properly */
+  .contact-inner,
+  .legacy-header,
+  .gallery-header,
+  .titles-header {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Make sure stats bar fills width */
+  .stats-bar {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Reset any potential overflow from text elements */
+  h1, h2, h3, h4, p {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .titles-watermark {
+    font-size: 5rem;
+  }
+  
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ═══════════════════════════════
+   INTRO OVERLAY MOBILE FIX
+═══════════════════════════════ */
+#intro-overlay {
+  width: 100vw;
+  max-width: 100%;
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.intro-ring-wrap {
+  margin: 0 auto;
+}
+
+.intro-tagline {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .intro-ring-wrap {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .intro-mono {
+    font-size: 2.8rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .intro-tagline {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    padding: 0 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 380px) {
+  .intro-tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    padding: 0 1rem;
+  }
+  
+  .intro-mono {
+    font-size: 2.4rem;
+  }
+  
+  .intro-ring-wrap {
+    width: 140px;
+    height: 140px;
+  }
+}
 </style>
 </head>
 <body>
 
-<!-- ✓ WCAG 2.4.1: Skip Navigation -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- INTRO -->
@@ -1954,14 +2445,14 @@ footer {
 
 <main id="main-content" role="main">
 
-<!-- ══════════ HERO ══════════ -->
+<!-- HERO -->
 <section id="hero" aria-labelledby="hero-name">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-grid-lines" aria-hidden="true"></div>
   <div class="hero-side-line left" aria-hidden="true"></div>
   <div class="hero-side-line right" aria-hidden="true"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow" id="h-eyebrow"></p>
+    <p class="hero-eyebrow" id="h-eyebrow">Philanthropist · Statesman · Educator</p>
     <h1 class="hero-name-wrap" id="h-name">
       <span class="hero-name-top">OTUNBA</span>
       <span class="hero-name-main" id="hero-name">JERRY</span>
@@ -1990,7 +2481,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ STORY ══════════ -->
+<!-- STORY -->
 <section id="story" class="section-wrap" aria-labelledby="story-heading">
   <div class="container">
     <div class="story-layout">
@@ -2022,18 +2513,18 @@ footer {
         <h2 class="section-heading" id="story-heading">A Life<br><em>Spent Building</em><br>People</h2>
         <div class="gold-rule" aria-hidden="true"></div>
         <p class="lead reveal delay-1">Some people spend their lives pursuing success. Others spend their lives creating it for others. Dr Jerry Oluranti has always belonged to the second kind.</p>
-        <p class="reveal delay-1">Born September 26, 1975, he arrived in a world that would demand both discipline and imagination. From his earliest years, he understood that education is not a credential — it is a foundation. That understanding shaped every chapter that followed.</p>
+        <p class="reveal delay-1">Born September 26, 1975, he arrived in a world that would demand both discipline and imagination. From his earliest years, he understood that education is not a credential it is a foundation. That understanding shaped every chapter that followed.</p>
         <p class="reveal delay-2">He began as an educator, standing before classrooms not merely to transfer knowledge, but to transform futures. As a Senior Lecturer, he saw what happens when access to quality instruction opens a door that poverty, geography, or circumstance had closed. He never forgot that sight.</p>
-        <p class="reveal delay-2">Technology came next — not as a career pivot but as a natural extension of his belief that tools should serve people. <strong>Certifications in Cisco networking, Oracle, Microsoft, and ITIL</strong> were not trophies. They were instruments deployed in service of people and communities.</p>
+        <p class="reveal delay-2">Technology came next not as a career pivot but as a natural extension of his belief that tools should serve people. <strong>Certifications in Cisco networking, Oracle, Microsoft, and ITIL</strong> were not trophies. They were instruments deployed in service of people and communities.</p>
         <p class="reveal delay-3">When he turned his attention to healthcare, he brought the same discipline. As <strong>CEO of Complete Care Support Services Inc.</strong> in Maryland, he built an organization anchored in the dignity of those it serves. Healthcare, to him, is not an industry. It is a covenant.</p>
-        <p class="reveal delay-3">Philanthropy was not a late chapter in his story. It was the plot. Through <strong>Global Outreach Impact Inc.</strong> and an unbroken thread of community service, he has extended opportunity to those the world too often overlooks — earning a formal <strong>Georgia Senate Commendation Resolution</strong> in recognition.</p>
+        <p class="reveal delay-3">Philanthropy was not a late chapter in his story. It was the plot. Through <strong>Global Outreach Impact Inc.</strong> and an unbroken thread of community service, he has extended opportunity to those the world too often overlooks earning a formal <strong>Georgia Senate Commendation Resolution</strong> in recognition.</p>
         <p class="reveal delay-4">Through all of it, a single conviction has never wavered: that one life, lived with purpose, can quietly change the trajectory of many others. That is the story of Otunba Jerry Oluranti. It is still being written.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ STATS ══════════ -->
+<!-- STATS -->
 <section id="stats" class="section-wrap" aria-label="Impact statistics">
   <div class="stats-bar reveal" role="list">
     <div class="stat-item" role="listitem">
@@ -2055,7 +2546,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ ENTERPRISES ══════════ -->
+<!-- ENTERPRISES -->
 <section id="enterprises" class="section-wrap" aria-labelledby="ent-heading">
   <div class="container">
     <p class="section-label reveal">Vehicles for Service</p>
@@ -2115,7 +2606,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ HONORS ══════════ -->
+<!-- HONORS -->
 <section id="honors" class="section-wrap" aria-labelledby="honors-heading">
   <div class="container">
     <div style="text-align:center;margin-bottom:1rem;">
@@ -2145,7 +2636,7 @@ footer {
           <path d="M30 48 L30 54 L36 51 L42 54 L42 48" fill="rgba(212,178,84,0.3)" stroke="var(--gold-light)" stroke-width="1"/>
         </svg>
         <h3 class="honor-title">Georgia Senate Commendation</h3>
-        <p class="honor-desc">The Georgia State Senate formally commended his distinguished contributions to civic life a rare honor reflecting the depth of his impact on American society.</p>
+        <p class="honor-desc">The Georgia State Senate formally commended his distinguished contributions to civic life, a rare honor reflecting the depth of his impact on American society.</p>
       </article>
       <article class="honor-card reveal delay-3">
         <div class="honor-glow" aria-hidden="true"></div>
@@ -2162,7 +2653,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ TITLES ══════════ -->
+<!-- TITLES -->
 <section id="titles" class="section-wrap" aria-labelledby="titles-heading">
   <div class="titles-watermark" aria-hidden="true">OJO</div>
   <div class="titles-content">
@@ -2181,7 +2672,7 @@ footer {
           <div>
             <h3 class="title-name">Otunba Bobaseto of Ilaro Yewaland</h3>
             <p class="title-location">Ilaro, Yewaland · Ogun State, Nigeria</p>
-            <p class="title-desc">A title of honour and leadership from the seat of the Yewa kingdom. To be named Otunba Bobaseto is to be recognized as a pillar of communal strength — one who supports, defends, and elevates his people.</p>
+            <p class="title-desc">A title of honour and leadership from the seat of the Yewa kingdom. To be named Otunba Bobaseto is to be recognized as a pillar of communal strength one who supports, defends, and elevates his people.</p>
           </div>
         </article>
         <article class="title-card reveal delay-2">
@@ -2189,8 +2680,8 @@ footer {
             <span class="title-emblem-glyph">✦</span>
           </div>
           <div>
-            <h3 class="title-name">Otunba Bobakeye of Oke-Sopen Ijebu Igbo</h3>
-            <p class="title-location">Oke-Sopen, Ijebu Igbo · Ogun State, Nigeria</p>
+            <h3 class="title-name">Otunba Bobakeye of Oke Sopen Ijebu Igbo</h3>
+            <p class="title-location">Oke Sopen, Ijebu Igbo · Ogun State, Nigeria</p>
             <p class="title-desc">A second Otunba chieftaincy extending his sphere of honour across Ijebu Igbo — a recognition that his service has reached beyond one community to bless many.</p>
           </div>
         </article>
@@ -2211,7 +2702,7 @@ footer {
           <div>
             <h3 class="title-name">Asiwaju of Oke Aro Land</h3>
             <p class="title-location">Oke Aro · Southwest Nigeria</p>
-            <p class="title-desc">Asiwaju — the vanguard, the one who leads the way. To be honoured as Asiwaju is to be recognized as a pioneer: one who opens paths for others to follow.</p>
+            <p class="title-desc">Asiwaju the vanguard, the one who leads the way. To be honoured as Asiwaju is to be recognized as a pioneer: one who opens paths for others to follow.</p>
           </div>
         </article>
       </div>
@@ -2219,7 +2710,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ MUSICIAN ══════════ -->
+<!-- MUSICIAN -->
 <section id="musician" class="section-wrap" aria-labelledby="music-heading">
   <div class="container">
     <div class="musician-layout">
@@ -2274,9 +2765,9 @@ footer {
         <p class="section-label">The Human Dimension</p>
         <h2 class="section-heading" id="music-heading">The Musician<br>Within the<br><em>Statesman</em></h2>
         <div class="gold-rule" aria-hidden="true"></div>
-        <p>For over thirty years, before titles were conferred and organizations built, there was music. Piano first — then a widening proficiency that made instruments speak what ordinary language could not.</p>
+        <p>For over thirty years, before titles were conferred and organizations built, there was music. Piano first then a widening proficiency that made instruments speak what ordinary language could not.</p>
         <p>Music was never a hobby. It was a school. Every hour at the keyboard was a lesson in patience, precision, and the understanding that mastery is built slowly, note by note.</p>
-        <p>Those who have led complex organizations recognize the discipline. Those who have served communities recognize the empathy. Both were formed, in part, at the piano bench — in early years when a young man learned to listen, feel, and bring disparate elements into harmony.</p>
+        <p>Those who have led complex organizations recognize the discipline. Those who have served communities recognize the empathy. Both were formed, in part, at the piano bench in early years when a young man learned to listen, feel, and bring disparate elements into harmony.</p>
         <div class="music-grid">
           <div class="music-card">
             <p class="music-card-title">Discipline</p>
@@ -2300,7 +2791,7 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ GALLERY ══════════ -->
+<!-- GALLERY -->
 <section id="gallery" class="section-wrap" aria-labelledby="gallery-heading">
   <div class="container">
     <div class="gallery-header">
@@ -2511,13 +3002,13 @@ footer {
   </div>
 </div>
 
-<!-- ══════════ PRESS & BOOKS ══════════ -->
+<!-- PRESS & BOOKS -->
 <section id="press" class="section-wrap" aria-labelledby="press-heading">
   <div class="container">
     <p class="section-label reveal">As Covered By</p>
     <h2 class="section-heading reveal delay-1" id="press-heading">In the Press &amp;<br><em>Published Works</em></h2>
     <div class="gold-rule reveal delay-2" aria-hidden="true"></div>
-    <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);max-width:560px;line-height:1.85;font-weight:500;">Nigeria's most respected publications have documented the milestones of a remarkable life — from landmark book launches attended by former heads of state to insights on leadership shaping national conversation.</p>
+    <p class="reveal delay-2" style="font-size:1.1rem;color:var(--text-secondary);max-width:560px;line-height:1.85;font-weight:500;">Nigeria's most respected publications have documented the milestones of a remarkable life from landmark book launches attended by former heads of state to insights on leadership shaping national conversation.</p>
 
     <div class="press-layout reveal delay-1">
       <article class="press-main">
@@ -2526,7 +3017,7 @@ footer {
           <span style="width:4px;height:4px;background:var(--gold);border-radius:50%;" aria-hidden="true"></span>
           <span class="press-badge-date">June 2, 2026</span>
         </div>
-        <h3 class="press-headline">"Leadership, Key to Start-Up Development" — Oluranti, Real Estate Expert</h3>
+        <h3 class="press-headline">"Leadership, Key to Start Up Development" Oluranti, Real Estate Expert</h3>
         <p class="press-deck">The real estate mogul turned author speaks on the five foundational elements for great achievement: <em>"Most very great achievements do not look great when they first begin. They often appear small, ordinary, hidden, unimpressive, and sometimes even uncertain."</em></p>
         <a href="https://www.vanguardngr.com/2026/06/leadership-key-to-start-up-development-oluranti-real-estate-expert/" class="press-link" target="_blank" rel="noopener noreferrer" aria-label="Read full Vanguard article (opens in new tab)">Read Full Article</a>
       </article>
@@ -2578,7 +3069,7 @@ footer {
         <div class="book-info">
           <p class="book-label">Book One</p>
           <h4 class="book-title">The Power of Starting Small: Bold Dreams, Lasting Impact</h4>
-          <p class="book-desc">A rallying call to those afraid to begin. Greatness rarely starts with grand gestures it begins with humble steps, consistent action, and the willingness to build when results are not yet visible.</p>
+          <p class="book-desc">A rallying call to those afraid to begin. Greatness rarely starts with grand gestures. It begins with humble steps, consistent action, and the willingness to build when results are not yet visible.</p>
         </div>
       </article>
       <article class="book-card reveal delay-2">
@@ -2592,7 +3083,7 @@ footer {
         <div class="book-info">
           <p class="book-label">Book Two</p>
           <h4 class="book-title">The Psychology of Giving: Why We Help Others</h4>
-          <p class="book-desc">An exploration of the human impulse toward generosity — what drives us to serve, to sacrifice, and to invest in the flourishing of those around us, even at personal cost.</p>
+          <p class="book-desc">An exploration of the human impulse toward generosity what drives us to serve, to sacrifice, and to invest in the flourishing of those around us, even at personal cost.</p>
         </div>
       </article>
       <article class="book-card reveal delay-3">
@@ -2606,21 +3097,21 @@ footer {
         <div class="book-info">
           <p class="book-label">Book Three</p>
           <h4 class="book-title">The Leadership of Small Things: Small Acts, Great Impacts</h4>
-          <p class="book-desc">The conviction that the most transformative leadership happens not in boardrooms but in quiet, daily choices — small acts performed with intention that accumulate into lasting change.</p>
+          <p class="book-desc">The conviction that the most transformative leadership happens not in boardrooms but in quiet, daily choices small acts performed with intention that accumulate into lasting change.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ══════════ LEGACY ══════════ -->
+<!-- LEGACY -->
 <section id="legacy" class="section-wrap" aria-labelledby="legacy-heading">
   <div class="container">
     <div class="legacy-header">
       <p class="section-label reveal" style="justify-content:center;">The Reach of One Life</p>
       <h2 class="section-heading reveal delay-1" id="legacy-heading">A Legacy<br><em>Still Being Written</em></h2>
       <div class="gold-rule center reveal delay-2" aria-hidden="true"></div>
-      <p class="reveal delay-2" style="font-size:1.15rem;color:var(--text-secondary);line-height:1.85;font-weight:500;font-style:italic;">The most enduring legacies are not built in a single act of greatness. They are woven — thread by thread — through decades of quiet, persistent service.</p>
+      <p class="reveal delay-2" style="font-size:1.15rem;color:var(--text-secondary);line-height:1.85;font-weight:500;font-style:italic;">The most enduring legacies are not built in a single act of greatness. They are woven thread by thread through decades of quiet, persistent service.</p>
     </div>
     <div class="legacy-pillars">
       <div class="legacy-pillar reveal delay-1">
@@ -2630,7 +3121,7 @@ footer {
           <line x1="24" y1="8" x2="24" y2="14" stroke="var(--gold-light)" stroke-width="1.5"/>
         </svg>
         <p class="pillar-title">Healthcare &amp; Education</p>
-        <p class="pillar-desc">Two institutions that shape the arc of human potential — and two arenas in which he has invested the best of himself for thirty years.</p>
+        <p class="pillar-desc">Two institutions that shape the arc of human potential and two arenas in which he has invested the best of himself for thirty years.</p>
       </div>
       <div class="legacy-pillar reveal delay-2">
         <svg class="pillar-icon-wrap" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
@@ -2638,7 +3129,7 @@ footer {
           <line x1="8" y1="24" x2="40" y2="24" stroke="var(--gold-light)" stroke-width="1"/>
         </svg>
         <p class="pillar-title">Global Reach</p>
-        <p class="pillar-desc">From Yewaland to Maryland, from Ilaro to Georgia — his influence crosses hemispheres, connecting communities through shared purpose.</p>
+        <p class="pillar-desc">From Yewaland to Maryland, from Ilaro to Georgia his influence crosses hemispheres, connecting communities through shared purpose.</p>
       </div>
       <div class="legacy-pillar reveal delay-3">
         <svg class="pillar-icon-wrap" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
@@ -2652,27 +3143,27 @@ footer {
           <path d="M10 34 Q14 18 24 14 Q34 18 38 34" stroke="var(--gold-light)" stroke-width="1.5" fill="none"/>
         </svg>
         <p class="pillar-title">Philanthropic Spirit</p>
-        <p class="pillar-desc">Generosity as a practice, not a moment. His humanitarian work is not episodic — it is the permanent condition of how he moves through the world.</p>
+        <p class="pillar-desc">Generosity as a practice, not a moment. His humanitarian work is not episodic it is the permanent condition of how he moves through the world.</p>
       </div>
       <div class="legacy-pillar reveal delay-2">
         <svg class="pillar-icon-wrap" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
           <rect x="8" y="18" width="32" height="20" rx="2" stroke="var(--gold-light)" stroke-width="1.5"/>
         </svg>
         <p class="pillar-title">Technology &amp; Innovation</p>
-        <p class="pillar-desc">CCNA, Oracle OCA, MCP, ITIL — credentials deployed in the service of people who needed modern systems built for them.</p>
+        <p class="pillar-desc">CCNA, Oracle OCA, MCP, ITIL credentials deployed in the service of people who needed modern systems built for them.</p>
       </div>
       <div class="legacy-pillar reveal delay-3">
         <svg class="pillar-icon-wrap" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
           <ellipse cx="24" cy="30" rx="16" ry="7" stroke="var(--gold-light)" stroke-width="1.5" fill="none"/>
         </svg>
         <p class="pillar-title">Music &amp; the Human Spirit</p>
-        <p class="pillar-desc">Thirty years at the instrument — a reminder that the same man who builds institutions also creates beauty, and that both are acts of service.</p>
+        <p class="pillar-desc">Thirty years at the instrument a reminder that the same man who builds institutions also creates beauty, and that both are acts of service.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ CONTACT ══════════ -->
+<!-- CONTACT -->
 <section id="contact" class="section-wrap" aria-labelledby="contact-heading">
   <div class="contact-glow" aria-hidden="true"></div>
   <div class="container">
@@ -2688,31 +3179,77 @@ footer {
 
 </main>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="footer-left">
-    <span class="footer-mono">DJO</span>
-    <span class="footer-tagline">A Life In Service</span>
-  </div>
-  <div class="footer-center" aria-hidden="true">
-    <div class="footer-rule"></div>
-    <svg width="28" height="28" viewBox="0 0 28 28" focusable="false">
-      <circle cx="14" cy="14" r="12" fill="none" stroke="rgba(212,178,84,0.4)" stroke-width="1"/>
-      <polygon points="14,6 16,11 22,11 17,15 19,20 14,17 9,20 11,15 6,11 12,11" fill="rgba(212,178,84,0.5)" stroke="var(--gold-light)" stroke-width="0.5"/>
-    </svg>
-    <div class="footer-rule"></div>
-  </div>
-  <div class="footer-right">
-    <p>&copy; 2026 Otunba Jerry Oluranti</p>
-    <p>All rights reserved.</p>
+  <div class="footer-container">
+    
+    <!-- TOP ROW: Partners Section -->
+    <div class="footer-partners">
+      <p class="footer-section-label">Affiliated Enterprises</p>
+      <div class="footer-partners-grid">
+        
+        <a href="https://www.amazonluxuryapartments.com/" target="_blank" rel="noopener noreferrer" class="partner-card" aria-label="Visit Amazon Luxury Apartments (opens in new tab)">
+          <div class="partner-logo-wrap">
+            <img src="assets/images/amazon-logo.png" alt="Amazon Luxury Apartments — Luxury Living Redefined" class="partner-logo" loading="lazy">
+          </div>
+          <div class="partner-info">
+            <span class="partner-name">Amazon Luxury Apartments</span>
+            <span class="partner-tagline">Luxury Living Redefined</span>
+            <span class="partner-link">Visit Website →</span>
+          </div>
+        </a>
+        
+        <a href="https://www.globaloutreachimpact.org/" target="_blank" rel="noopener noreferrer" class="partner-card" aria-label="Visit Global Outreach Impact (opens in new tab)">
+          <div class="partner-logo-wrap">
+            <div class="partner-logo-placeholder" aria-hidden="true">
+              <svg width="80" height="80" viewBox="0 0 100 100" focusable="false">
+                <circle cx="50" cy="50" r="44" fill="none" stroke="var(--gold-light)" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="36" fill="none" stroke="var(--gold)" stroke-width="0.8" opacity="0.5"/>
+                <path d="M14 50 Q50 30 86 50 Q50 70 14 50" fill="none" stroke="var(--gold-light)" stroke-width="1"/>
+                <line x1="50" y1="6" x2="50" y2="94" stroke="var(--gold-light)" stroke-width="1"/>
+                <line x1="6" y1="50" x2="94" y2="50" stroke="var(--gold-light)" stroke-width="1"/>
+                <circle cx="50" cy="50" r="3" fill="var(--gold-light)"/>
+              </svg>
+            </div>
+          </div>
+          <div class="partner-info">
+            <span class="partner-name">Global Outreach Impact</span>
+            <span class="partner-tagline">Humanitarian Work Across Borders</span>
+            <span class="partner-link">Visit Website →</span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="footer-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <svg width="32" height="32" viewBox="0 0 28 28" focusable="false">
+        <circle cx="14" cy="14" r="12" fill="none" stroke="rgba(212,178,84,0.4)" stroke-width="1"/>
+        <polygon points="14,6 16,11 22,11 17,15 19,20 14,17 9,20 11,15 6,11 12,11" fill="rgba(212,178,84,0.5)" stroke="var(--gold-light)" stroke-width="0.5"/>
+      </svg>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- BOTTOM ROW: Brand & Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-brand">
+        <span class="footer-mono">DJO</span>
+        <span class="footer-tagline-text">A Life In Service</span>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; 2026 Otunba Jerry Oluranti · All rights reserved.</p>
+      </div>
+    </div>
+
   </div>
 </footer>
 
 <script>
-// Respect reduced motion preference
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ── INTRO ──
+// INTRO
 window.addEventListener('load', () => {
   const overlay = document.getElementById('intro-overlay');
   if (prefersReducedMotion) {
@@ -2742,20 +3279,19 @@ function startHero(instant = false) {
     const el = document.getElementById(id);
     if (!el) return;
     setTimeout(() => {
-      el.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+      el.style.transition = 'opacity 0.9s ease';
       el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
     }, instant ? 0 : delay);
   });
 }
 
-// ── NAV SCROLL ──
+// NAV SCROLL
 const mainNav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => {
   mainNav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
-// ── HAMBURGER / MOBILE NAV (with focus trap) ──
+// HAMBURGER / MOBILE NAV
 const hamburger = document.getElementById('hamburger');
 const mobNav = document.getElementById('mob-nav');
 const mobOverlay = document.getElementById('mob-overlay');
@@ -2787,7 +3323,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && mobNav.classList.contains('open')) closeMob();
 });
 
-// ── REVEAL ON SCROLL ──
+// REVEAL ON SCROLL
 const revealEls = document.querySelectorAll('.reveal');
 if (prefersReducedMotion) {
   revealEls.forEach(el => el.classList.add('visible'));
@@ -2803,7 +3339,7 @@ if (prefersReducedMotion) {
   revealEls.forEach(el => revealObs.observe(el));
 }
 
-// ── COUNTER ANIMATION (respects reduced motion) ──
+// COUNTER ANIMATION
 function countUp(el) {
   const target = +el.dataset.count;
   const suffix = el.dataset.suffix || '';
@@ -2824,7 +3360,6 @@ function countUp(el) {
   }, 1000 / fps);
 }
 
-// Initialize stat numbers to final value immediately for SEO/a11y
 document.querySelectorAll('[data-count]').forEach(el => {
   el.textContent = el.dataset.count + (el.dataset.suffix || '');
 });
@@ -2843,7 +3378,7 @@ const statsObs = new IntersectionObserver((entries) => {
 const statsBar = document.querySelector('.stats-bar');
 if (statsBar && !prefersReducedMotion) statsObs.observe(statsBar);
 
-// ── PARTICLES ──
+// PARTICLES
 (function () {
   if (prefersReducedMotion) return;
   const canvas = document.getElementById('particle-canvas');
@@ -2885,7 +3420,7 @@ if (statsBar && !prefersReducedMotion) statsObs.observe(statsBar);
   draw();
 })();
 
-// ── GALLERY FILTER ──
+// GALLERY FILTER
 const tabBtns = document.querySelectorAll('.tab-btn');
 const gItems = document.querySelectorAll('.g-item');
 
@@ -2902,7 +3437,7 @@ tabBtns.forEach(btn => {
   });
 });
 
-// ── LIGHTBOX (with focus trap) ──
+// LIGHTBOX
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lb-img');
 const lbPlaceholder = document.getElementById('lb-placeholder');
@@ -2972,7 +3507,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; showItem(visibleItems[currentIndex]); }
   if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % visibleItems.length; showItem(visibleItems[currentIndex]); }
-  // Focus trap
   if (e.key === 'Tab') {
     const focusable = [lbClose, lbPrev, lbNext];
     const idx = focusable.indexOf(document.activeElement);
@@ -2983,7 +3517,6 @@ document.addEventListener('keydown', e => {
 lbPrev.addEventListener('click', () => { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; showItem(visibleItems[currentIndex]); });
 lbNext.addEventListener('click', () => { currentIndex = (currentIndex + 1) % visibleItems.length; showItem(visibleItems[currentIndex]); });
 
-// Touch swipe support for lightbox (WCAG mobile)
 let touchStartX = 0;
 lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
 lightbox.addEventListener('touchend', e => {
